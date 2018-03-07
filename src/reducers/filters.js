@@ -3,15 +3,26 @@ import types from '../constants/actionTypes'
 
 const reducers = {}
 const initState = {
-  categories: [],
+  categories: {},
   priceRange: {
     min: 0,
     max: 10000
   }
 }
 
-reducers[types.SET_CATEGORY_FILTER] = (state = initState, action) => 
-  Object.assign({}, state, { categories: action.payload.data })
+reducers[types.SELECT_CATEGORY_FILTER] = (state = initState, action) => {
+  const categories = state.categories
+  categories[action.payload.data] = action.payload.data
+  
+  return Object.assign({}, state, { categories })
+} 
+
+reducers[types.DESELECT_CATEGORY_FILTER] = (state = initState, action) => {
+  const categories = state.categories
+  delete categories[action.payload.data]
+
+  return Object.assign({}, state, { categories })
+} 
 
 reducers[types.SET_PRICE_RANGE_FILTER] = (state = initState, action) => 
   Object.assign({}, state, { priceRange: action.payload.data })

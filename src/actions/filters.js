@@ -1,8 +1,16 @@
 import types from '../constants/actionTypes'
 
-const setCategoryFilter = (data) => 
+const selectCategoryFilter = (data) => 
   ({
-    type: types.SET_CATEGORY_FILTER,
+    type: types.SELECT_CATEGORY_FILTER,
+    payload: {
+      data
+    }
+  })
+
+const deselectCategoryFilter = (data) => 
+  ({
+    type: types.DESELECT_CATEGORY_FILTER,
     payload: {
       data
     }
@@ -17,6 +25,7 @@ const setPriceRangeFilter = (data) =>
   })
 
 export default {
-  setCategoryFilter,
+  selectCategoryFilter,
+  deselectCategoryFilter,
   setPriceRangeFilter
 }

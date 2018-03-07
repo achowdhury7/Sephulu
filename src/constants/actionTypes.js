@@ -1,11 +1,11 @@
 import products from './products'
 import categories from './categories'
-import priceRange from './priceRange'
+import priceRanges from './priceRanges'
 import filter from './filters'
 
 export default Object.assign({},
   products,
   categories,
-  priceRange,
+  priceRanges,
   filter
 )

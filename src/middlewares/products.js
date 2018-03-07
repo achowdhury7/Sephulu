@@ -1,7 +1,7 @@
 import { isFSA } from 'flux-standard-action'
 
 import types from '../constants/actionTypes'
-import { categoryActions, priceRangeActions } from '../actions'
+import { categoryActions, priceRangesActions } from '../actions'
 
 const setProducts = ({ dispatch, getState, action }) => {
   const products = action.payload.data.data
@@ -16,31 +16,31 @@ const setProducts = ({ dispatch, getState, action }) => {
     if (maxPrice < product.attributes.price) {
       // extract the highest value of price from the product array
       maxPrice = product.attributes.price
-    }  
+    }
   })
 
-  // const rangeSize = Math.round(maxPrice/4)
+  const rangeSize = Math.round(maxPrice/4)
   
-  // // create price ranges
-  // for (let i = 0; i < 3; i++) {
-  //   ranges.push({
-  //     max: maxPrice, min: maxPrice - rangeSize
-  //   })
+  // create price ranges
+  for (let i = 0; i < 3; i++) {
+    ranges.push({
+      max: maxPrice, min: maxPrice - rangeSize
+    })
 
-  //   maxPrice -= rangeSize
-  // }
-
-  // ranges.push({
-  //   max: maxPrice, min: 0
-  // })
-
-  const range = {
-    minPrice: 0,
-    maxPrice
+    maxPrice -= rangeSize
   }
 
+  ranges.push({
+    max: maxPrice, min: 0
+  })
+
+  // const range = {
+  //   minPrice: 0,
+  //   maxPrice
+  // }
+
   dispatch(categoryActions.setCategories(categories))
-  dispatch(priceRangeActions.setPriceRange(range))
+  dispatch(priceRangesActions.setPriceRanges(ranges))
 }
 
 const interceptors = {}

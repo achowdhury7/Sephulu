@@ -18,11 +18,10 @@ reducers[types.SET_PRODUCT_SELECTED] = (state = initState, action) => {
 
 reducers[types.SET_PRODUCTS] = (state = initState, action) => {
   const data = action.payload.data.data
-  console.log(action.payload.data)
   const products = {}
 
   const allIds = data.map((product) => {
-    products[product.id] = product
+    products[product.id] = product.attributes
     return product.id
   })
 

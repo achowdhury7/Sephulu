@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { Grid, Row, Col } from 'react-bootstrap'
 
-import { FilterContainer } from '../containers'
+import { FiltersContainer, ProductCardsContainer } from '../containers'
 
 class PageContent extends Component {
   constructor(props) {
@@ -20,12 +20,14 @@ class PageContent extends Component {
 
   render() {
     return (
-      <Grid>
+      <Grid className="page-content-container" fluid>
         <Row>
-          <Col xs={6} md={4} className="sidebar">
-            <FilterContainer />
+          <Col xs={7} md={3} className="sidebar">
+            <FiltersContainer />
           </Col>
-          <Col xs={12} md={8} className="main"></Col>
+          <Col xs={13} md={9} className="main">
+            <ProductCardsContainer />
+          </Col>
         </Row>
       </Grid>
     )

@@ -1,0 +1,11 @@
+.product-list {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  max-width: 1000px;
+}
+
+.product-list-item {
+  margin: 0 0 20px 30px;
+}

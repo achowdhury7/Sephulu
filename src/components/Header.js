@@ -3,15 +3,9 @@ import { Col, FormControl, FormGroup, Glyphicon, Grid, Row } from 'react-bootstr
 
 const Header = (props) => {
   return (
-    <Grid>
-      <Row className="header-container">
-        <Col md={4}>
-          <div className="title">
-            <h1>Sephulu</h1>
-          </div>
-        </Col>   
-      </Row>
-    </Grid>
+    <div className="header-container">
+      <div className="title"><h1>Sephulu</h1></div>
+    </div>
   )
 }
 

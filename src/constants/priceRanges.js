@@ -1,8 +1,7 @@
 const actionTypes = {}
 
 const actionConstants = [
-  'SET_PRICE_RANGE',
-  'SET_PRICE_RANGE_ERROR'
+  'SET_PRICE_RANGES'
 ]
 
 actionConstants.map((action) => { actionTypes[action] = action })
