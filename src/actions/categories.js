@@ -7,13 +7,7 @@ const setCategories = (data) =>
       data
     }
   })
-
-
-const setCategoriesError = data => 
-  ({
-    type: types.SET_CATEGORIES_ERROR
-  })
-
+  
 export default {
   setCategories
 }

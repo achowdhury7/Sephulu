@@ -1,8 +1,7 @@
 const actionTypes = {}
 
 const actionConstants = [
-  'SET_CATEGORIES',
-  'SET_CATEGORIES_ERROR'
+  'SET_CATEGORIES'
 ]
 
 actionConstants.map((action) => { actionTypes[action] = action })

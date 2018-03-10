@@ -2,7 +2,6 @@ import React, { Component } from 'react'
 import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
 import { PanelGroup, Panel } from 'react-bootstrap'
-import Collapsible from 'react-collapsible'
 
 import { filterActions, productActions } from '../actions'
 import { Header, PageContent, FilterCheckbox } from '../components'
@@ -11,19 +10,27 @@ import { Header, PageContent, FilterCheckbox } from '../components'
 class FiltersContainer extends Component {
   constructor(props) {
     super(props)
-    this.state = {
-      categories: [],
-      priceRanges: []
-    }
-    this.handleCheckboxChange = this.handleCheckboxChange.bind(this)
+    this.handleCategoryChange = this.handleCategoryChange.bind(this)
+    this.handlePriceRangeChange = this.handlePriceRangeChange.bind(this)
   }
 
-  handleCheckboxChange(event) {
-    const target = event.target
-    if (target.checked) {
-      this.props.actions.selectCategoryFilter(target.name)
+  handleCategoryChange(event) {
+    const selectedCategory = event.target.name
+
+    if (event.target.checked) {
+      this.props.actions.selectCategoryFilter(selectedCategory)
     } else {
-      this.props.actions.deselectCategoryFilter(target.name)
+      this.props.actions.deselectCategoryFilter(selectedCategory)
+    }
+  }
+
+  handlePriceRangeChange(event) {
+    const selectedPriceRange = this.props.priceRanges.filter(range => range.min == event.target.name)[0]
+
+    if (event.target.checked) {
+      this.props.actions.selectPriceRangeFilter(selectedPriceRange)
+    } else {
+      this.props.actions.deselectPriceRangeFilter(selectedPriceRange)
     }
   }
 
@@ -34,23 +41,27 @@ class FiltersContainer extends Component {
         label={category} 
         labelClass="filter-checkbox" 
         name={category} 
-        onChange={this.handleCheckboxChange} />
+        onChange={this.handleCategoryChange} />
     ))
     const priceRangeCheckboxes = this.props.priceRanges.map(priceRange => (
       <FilterCheckbox 
         labelClass="filter-checkbox" 
         key={priceRange.max + priceRange.min}
-        label={`$${(priceRange.min/100).toFixed(2)}-$${(priceRange.max/100).toFixed(2)}`}
-        name={`range${(priceRange.min/100).toFixed(2)}-${(priceRange.max/100).toFixed(2)}`} />
+        label={`$${Math.ceil(priceRange.min/100)}-$${Math.floor(priceRange.max/100)}`}
+        name={priceRange.min}
+        onChange={this.handlePriceRangeChange} />
     ))
+    
     return (
       <div>
-        <Collapsible className="filter-heading" trigger="Categories">
+        <div className="filter-container">
+          <div className="filter-header">Categories</div>
           {categoryCheckBoxes}
-        </Collapsible>
-        <Collapsible className="filter-heading" trigger="Price-Range">
+        </div>
+        <div className="filter-container" trigger="Price-Range">
+          <div className="filter-header">Price</div>
           {priceRangeCheckboxes}
-        </Collapsible>
+        </div>
       </div>
     )
   }
@@ -68,7 +79,8 @@ const mapDispatchToProps = dispatch =>
 
 const mapStateToProps = state => ({
   categories: state.app.categories,
-  priceRanges: state.app.priceRanges
+  filters: state.app.filters,
+  priceRanges: state.app.priceRanges,
 })
 
 export default connect(

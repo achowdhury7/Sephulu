@@ -5,8 +5,25 @@
 .sidebar {
   position: fixed;
   width: 300px;
+  padding: 0 10px;
+  z-index: 2;
 }
 
 .main {
+  border-left: 1px solid #e9e9ed;
   margin: 0 0 0 300px; 
+
+  .main-header {
+    border-bottom: 1px solid #e9e9ed;
+    padding: 10px 0;
+
+    .main-header-title {
+      font-weight: 400;
+      text-transform: uppercase;
+      font-size: 16px;
+      display: block;
+      position: relative;
+      padding: 10px 0;
+    }
+  }
 }

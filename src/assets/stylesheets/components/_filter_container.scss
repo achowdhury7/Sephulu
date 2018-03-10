@@ -1,25 +1,13 @@
-.Collapsible {
-  border-bottom: 3px solid #000000;
-  padding: 10px 0 5px 0;
-}
+.filter-container {
+  border-bottom: 1px solid #e9e9ed;
+  padding: 10px 10px 5px 10px;
 
-.Collapsible__trigger {
-  font-weight: 500;
-  text-transform: uppercase;
-  font-size: 14px;
-  margin: 0 0 10px;
-  clear: both;
-  color: #282c3f;
-  display: block;
-}
-
-.filter-checkbox {
-  display: block;
-  width: 95%;
-  white-space: nowrap;
-  cursor: pointer;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  min-height: 17px;
-  color: #282c3f;
+  .filter-header {
+    font-weight: 400;
+    text-transform: uppercase;
+    font-size: 14px;
+    display: block;
+    position: relative;
+    padding: 10px;
+  }
 }

@@ -1,10 +1,10 @@
 import types from '../constants/actionTypes'
 import get from '../utils/api'
 
-const fetchProducts = () => 
+const fetchProducts = (params) => 
   dispatch => {
     const path = '/products'
-    get(path)
+    get(path, params)
       .then((response) => dispatch(setProducts(response.data)))
       .catch(() => dispatch(setProductsError()))
   }

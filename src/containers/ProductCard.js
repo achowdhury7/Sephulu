@@ -7,8 +7,7 @@ const ProductCard = (props) => {
   const product = props.products[props.productId]
   const productPriceClasses = classNames({
     'product-price': true,
-    strikethrough: product.under_sale,
-    'text-red': product.under_sale
+    'cancelled': product.under_sale
   })
   const productSalePriceClasses = classNames({
     'product-sale-price': true,

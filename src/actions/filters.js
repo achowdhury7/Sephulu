@@ -16,9 +16,17 @@ const deselectCategoryFilter = (data) =>
     }
   })
 
-const setPriceRangeFilter = (data) => 
+const selectPriceRangeFilter = (data) => 
   ({
-    type: types.SET_PRICE_RANGE_FILTER,
+    type: types.SELECT_PRICE_RANGE_FILTER,
+    payload: {
+      data
+    }
+  })
+
+const deselectPriceRangeFilter = (data) => 
+  ({
+    type: types.DESELECT_PRICE_RANGE_FILTER,
     payload: {
       data
     }
@@ -27,5 +35,6 @@ const setPriceRangeFilter = (data) =>
 export default {
   selectCategoryFilter,
   deselectCategoryFilter,
-  setPriceRangeFilter
+  selectPriceRangeFilter,
+  deselectPriceRangeFilter
 }

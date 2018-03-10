@@ -3,41 +3,27 @@ import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
 
 import { filterActions, productActions } from '../actions'
-import { ProductCard } from '../components'
+import { ProductCard } from '../containers'
 
 
 class ProductCardsContainer extends Component {
-  constructor(props) {
-    super(props)
-  }
-
   render() {
     const listItems = this.props.productIds.map(id => (
       <li className="product-list-item" key={id}><ProductCard productId={id} /></li>
     ))
+
     return (
       <ul className="product-list">{listItems}</ul>
     )
   }
 }
 
-const mapDispatchToProps = dispatch => 
-  ({
-    actions: bindActionCreators(Object.assign(
-      {},
-      filterActions,
-      productActions),
-      dispatch
-    )
-  })
-
 const mapStateToProps = state => ({
-  productIds: Object.keys(state.app.products.byId)
+  productIds: state.app.products.allIds
 })
 
 
 export default connect(
-  mapStateToProps,
-  mapDispatchToProps
+  mapStateToProps
 )(ProductCardsContainer)
 

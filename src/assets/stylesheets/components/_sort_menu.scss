@@ -1,0 +1,18 @@
+.sort-menu-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 350px;
+
+  .nav-pills > li > a {
+    border-radius: 20px;
+    padding: 7px;
+  }
+
+  .sort-menu {
+    .sort-menu-item + .sort-menu-item {
+      margin-left: 10px;
+    }
+  }
+}
