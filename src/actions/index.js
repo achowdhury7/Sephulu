@@ -1,5 +1,6 @@
 export { default as productActions } from './products'
 export { default as categoryActions } from './categories'
+export { default as paginationActions } from './pagination'
 export { default as priceRangeActions } from './priceRanges'
 export { default as filterActions } from './filters'
 export { default as sortActions } from './sort'

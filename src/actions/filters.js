@@ -32,9 +32,18 @@ const deselectPriceRangeFilter = (data) =>
     }
   })
 
+const setPageSizeFilter = (data) => 
+  ({
+    type: types.SET_PAGE_SIZE_FILTER,
+    payload: {
+      data
+    }
+  })
+
 export default {
   selectCategoryFilter,
   deselectCategoryFilter,
   selectPriceRangeFilter,
-  deselectPriceRangeFilter
+  deselectPriceRangeFilter,
+  setPageSizeFilter
 }

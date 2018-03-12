@@ -48,6 +48,10 @@ reducers[types.DESELECT_PRICE_RANGE_FILTER] = (state = initState, action) => {
     .join('&')
 
   return Object.assign({}, state, { selectedPriceRanges, priceRangeParams: paramString })
-} 
+}
+
+reducers[types.SET_PAGE_SIZE_FILTER] = (state = initState, action) => 
+  Object.assign({}, state, { pageSizeParam: `page[size]=${action.payload.data}` })
+
 
 export default handleActions(reducers, initState)

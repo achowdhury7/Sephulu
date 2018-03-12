@@ -25,5 +25,11 @@
       position: relative;
       padding: 10px 0;
     }
+
+    .main-header-options-container {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+    }
   }
 }

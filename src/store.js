@@ -1,12 +1,13 @@
 import { createStore, applyMiddleware, compose } from 'redux'
 import thunk from 'redux-thunk'
 
-import { sortMiddleware, filterMiddleware } from './middleware'
+import { sortMiddleware, filterMiddleware, productMiddleware } from './middleware'
 import { rootReducer } from './reducers'
 
 const middleware = [
   filterMiddleware,
   sortMiddleware,
+  productMiddleware,
   thunk
 ]
 

@@ -1,3 +1,5 @@
 export { default as Header } from './Header'
 export { default as FilterCheckbox } from './FilterCheckbox'
+export { default as Pagination } from './Pagination'
+export { default as PageSizeDropdown } from './PageSizeDropdown'
 export { default as SortMenu } from './SortMenu'

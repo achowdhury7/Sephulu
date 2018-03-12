@@ -1,13 +1,15 @@
-import products from './products'
 import categories from './categories'
-import priceRanges from './priceRanges'
 import filter from './filters'
+import pagination from './pagination'
+import priceRanges from './priceRanges'
+import products from './products'
 import sort from './sort'
 
 export default Object.assign({},
-  products,
   categories,
-  priceRanges,
   filter,
+  pagination,
+  priceRanges,
+  products,
   sort
 )
