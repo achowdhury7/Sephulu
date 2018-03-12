@@ -1,0 +1,14 @@
+.list-checkbox {
+  position: absolute;
+  z-index: 1;
+  padding-left: 10px;
+
+  input {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+.list-group-item {
+  padding-left: 35px;
+}

@@ -1,13 +1,6 @@
 ## Node specific changes
 node_modules
-node_modules_backup
-
-## Deployment & Environment
-.env
-.env.staging
-.env.production
-deploy
-keys
+npm-debug.log
 build
 
 # Git
@@ -22,6 +15,11 @@ build
 # Icon must end with two \r
 Icon
 
+# Environment files
+.env
+.env.staging
+.env.production
+
 # Thumbnails
 ._*
 
@@ -30,11 +28,11 @@ Icon
 .Trashes
 
 # Directories potentially created on remote AFP share
-.apdisk
 .AppleDB
 .AppleDesktop
 Network Trash Folder
 Temporary Items
+.apdisk
 
 # Windows image file caches
 Thumbs.db
@@ -75,11 +73,10 @@ $RECYCLE.BIN/
 *.tar
 *.zip
 
-# Logs and Databases
+# Logs and databases
 *.log
 *.sql
 *.sqlite
-dump
 
-# Editor files
-.vscode
+# Bundle Files
+dist/*

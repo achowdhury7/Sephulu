@@ -1,0 +1,19 @@
+body {
+  background-color: #ffffff; 
+  font-family: "Open Sans";
+  font-size: 14px;
+  color: #282c3f;
+}
+
+.strikethrough {
+  text-decoration: line-through;
+}
+
+.cancelled {
+  @extend .strikethrough;
+  color: #696b79;
+}
+
+.hidden {
+  display: none;
+}

@@ -1,0 +1,41 @@
+.product-container {
+  border: 1px solid #f3f3f3;
+  width: 250px;
+}
+
+.product-image {
+  background-image: url('http://via.placeholder.com/250x180');
+  height: 180px;
+}
+
+.product-desc {
+  z-index: 2;
+  background: #fff;
+  height: 100px;
+  padding: 10px 5px;
+  text-align: center;
+}
+
+.product-name {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 20px;
+  text-transform: capitalize;
+}
+
+.product-category {
+  color: #3e4152;
+  line-height: 16px;
+  margin-top: 5px;
+  margin-bottom: 10px;
+  font-weight: 400;
+  text-transform: capitalize;
+}
+
+.product-price-container {
+  font-size: 12px;
+}
+
+.product-sale-price + .product-price {
+  margin: 0 0 0 10px;
+}
