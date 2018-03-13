@@ -1,0 +1,32 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`render product cards container 1`] = `
+<ul
+  className="product-list"
+>
+  <li
+    className="product-list-item"
+    key="1"
+  >
+    <Connect(ProductCard)
+      productId="1"
+    />
+  </li>
+  <li
+    className="product-list-item"
+    key="2"
+  >
+    <Connect(ProductCard)
+      productId="2"
+    />
+  </li>
+  <li
+    className="product-list-item"
+    key="3"
+  >
+    <Connect(ProductCard)
+      productId="3"
+    />
+  </li>
+</ul>
+`;

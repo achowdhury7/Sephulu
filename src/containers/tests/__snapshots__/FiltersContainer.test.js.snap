@@ -1,0 +1,67 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`render filters 1`] = `
+<div>
+  <div
+    className="filter-container"
+  >
+    <div
+      className="filter-header"
+    >
+      Categories
+    </div>
+    <FilterCheckbox
+      key="a"
+      label="a"
+      labelClass="filter-checkbox"
+      name="a"
+      onChange={[Function]}
+    />
+    <FilterCheckbox
+      key="b"
+      label="b"
+      labelClass="filter-checkbox"
+      name="b"
+      onChange={[Function]}
+    />
+    <FilterCheckbox
+      key="c"
+      label="c"
+      labelClass="filter-checkbox"
+      name="c"
+      onChange={[Function]}
+    />
+  </div>
+  <div
+    className="filter-container"
+    trigger="Price-Range"
+  >
+    <div
+      className="filter-header"
+    >
+      Price
+    </div>
+    <FilterCheckbox
+      key="10"
+      label="$0-$0"
+      labelClass="filter-checkbox"
+      name={0}
+      onChange={[Function]}
+    />
+    <FilterCheckbox
+      key="30"
+      label="$1-$0"
+      labelClass="filter-checkbox"
+      name={10}
+      onChange={[Function]}
+    />
+    <FilterCheckbox
+      key="50"
+      label="$1-$0"
+      labelClass="filter-checkbox"
+      name={20}
+      onChange={[Function]}
+    />
+  </div>
+</div>
+`;

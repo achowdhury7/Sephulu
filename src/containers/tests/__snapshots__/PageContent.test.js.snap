@@ -1,0 +1,84 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`render page content 1`] = `
+<Grid
+  bsClass="container"
+  className="page-content-container"
+  componentClass="div"
+  fluid={true}
+>
+  <Row
+    bsClass="row"
+    componentClass="div"
+  >
+    <Col
+      bsClass="col"
+      className="sidebar"
+      componentClass="div"
+      md={3}
+      xs={7}
+    >
+      <Connect(FiltersContainer) />
+    </Col>
+    <Col
+      bsClass="col"
+      className="main"
+      componentClass="div"
+      md={9}
+      xs={13}
+    >
+      <div
+        className="main-header"
+      >
+        <div
+          className="main-header-title"
+        >
+          Products
+        </div>
+        <div
+          className="main-header-options-container"
+        >
+          <SortMenu
+            handleSelect={[Function]}
+            menuItems={
+              Object {
+                "-price": "Price: High to Low",
+                "price": "Price: Low to High",
+              }
+            }
+          />
+          <div>
+            View: 
+            <span>
+              <PageSizeDropdown
+                handleSelect={[Function]}
+                menuItems={
+                  Array [
+                    20,
+                    25,
+                    30,
+                  ]
+                }
+              />
+            </span>
+          </div>
+        </div>
+      </div>
+      <div
+        className="main-content"
+      >
+        <Connect(ProductCardsContainer) />
+      </div>
+      <div
+        className="main-footer"
+      >
+        <Pagination
+          handleSelect={[Function]}
+          hasNext="/mockLink"
+          hasPrev="/mockLink"
+        />
+      </div>
+    </Col>
+  </Row>
+</Grid>
+`;

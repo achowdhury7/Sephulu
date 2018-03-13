@@ -10,3 +10,9 @@
     margin: 0 0 20px 30px;
   }
 }
+
+.product-list-loader {
+  & div[class*="css"] {
+    background-color: #e25f70; 
+  }
+}

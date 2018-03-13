@@ -1,0 +1,96 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`render product card 1`] = `
+<div
+  className="product-container"
+>
+  <div
+    className="product-image"
+  />
+  <div
+    className="product-desc"
+  >
+    <div
+      className="product-name"
+    >
+      <a
+        onClick={[Function]}
+      >
+        product1
+      </a>
+    </div>
+    <div
+      className="product-category"
+    >
+      <span>
+        product
+      </span>
+    </div>
+    <div
+      className="product-price-container"
+    >
+      <span
+        className="product-sale-price"
+      >
+        $
+        NaN
+      </span>
+      <span
+        className="product-price cancelled"
+      >
+        $
+        NaN
+      </span>
+    </div>
+  </div>
+  <Modal
+    animation={true}
+    autoFocus={true}
+    backdrop={true}
+    bsClass="modal"
+    dialogComponentClass={[Function]}
+    enforceFocus={true}
+    keyboard={true}
+    manager={
+      ModalManager {
+        "add": [Function],
+        "containers": Array [],
+        "data": Array [],
+        "handleContainerOverflow": true,
+        "hideSiblingNodes": true,
+        "isTopModal": [Function],
+        "modals": Array [],
+        "remove": [Function],
+      }
+    }
+    onHide={[Function]}
+    renderBackdrop={[Function]}
+    restoreFocus={true}
+    show={false}
+  >
+    <ModalHeader
+      bsClass="modal-header"
+      closeButton={true}
+      closeLabel="Close"
+    >
+      <ModalTitle
+        bsClass="modal-title"
+        componentClass="h4"
+      >
+        product1
+      </ModalTitle>
+    </ModalHeader>
+    <ModalBody
+      bsClass="modal-body"
+      componentClass="div"
+    >
+      <div
+        className="product-modal-image-container"
+      />
+      <div
+        className="product-modal-desc-container"
+      />
+    </ModalBody>
+  </Modal>
+</div>
+`;

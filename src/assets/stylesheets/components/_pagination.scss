@@ -1,0 +1,19 @@
+.pager {
+  
+  .disabled>a {
+    border-color: #777777 !important;
+  }
+
+  li>a {
+    border: 1px solid #e25f70;
+  
+    &:hover {
+      background-color: #ffffff;
+      border-color: #866768;  
+    }
+
+    &:focus {
+      background-color: #fcded5;
+    }
+  }
+} 

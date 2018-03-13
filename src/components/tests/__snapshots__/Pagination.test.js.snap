@@ -1,0 +1,196 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`disable \`next\` button if \`hasNext\` is false 1`] = `
+<Pagination
+  hasNext={false}
+>
+  <Pager
+    bsClass="pager"
+  >
+    <ul
+      className="pager"
+    >
+      <PagerItem
+        disabled={true}
+        eventKey="prev"
+        href="#"
+        key=".0"
+        next={false}
+        onSelect={null}
+        previous={false}
+      >
+        <li
+          className="disabled"
+        >
+          <SafeAnchor
+            componentClass="a"
+            disabled={true}
+            href="#"
+            onClick={[Function]}
+          >
+            <a
+              href="#"
+              onClick={[Function]}
+              onKeyDown={[Function]}
+              role="button"
+              style={
+                Object {
+                  "pointerEvents": "none",
+                }
+              }
+              tabIndex={-1}
+            >
+              Previous
+            </a>
+          </SafeAnchor>
+        </li>
+      </PagerItem>
+      <PagerItem
+        disabled={true}
+        eventKey="next"
+        href="#"
+        key=".1"
+        next={false}
+        onSelect={null}
+        previous={false}
+      >
+        <li
+          className="disabled"
+        >
+          <SafeAnchor
+            componentClass="a"
+            disabled={true}
+            href="#"
+            onClick={[Function]}
+          >
+            <a
+              href="#"
+              onClick={[Function]}
+              onKeyDown={[Function]}
+              role="button"
+              style={
+                Object {
+                  "pointerEvents": "none",
+                }
+              }
+              tabIndex={-1}
+            >
+              Next
+            </a>
+          </SafeAnchor>
+        </li>
+      </PagerItem>
+    </ul>
+  </Pager>
+</Pagination>
+`;
+
+exports[`disable \`previous\` button if \`hasPrev\` is false 1`] = `
+<Pagination
+  hasPrev={false}
+>
+  <Pager
+    bsClass="pager"
+  >
+    <ul
+      className="pager"
+    >
+      <PagerItem
+        disabled={true}
+        eventKey="prev"
+        href="#"
+        key=".0"
+        next={false}
+        onSelect={null}
+        previous={false}
+      >
+        <li
+          className="disabled"
+        >
+          <SafeAnchor
+            componentClass="a"
+            disabled={true}
+            href="#"
+            onClick={[Function]}
+          >
+            <a
+              href="#"
+              onClick={[Function]}
+              onKeyDown={[Function]}
+              role="button"
+              style={
+                Object {
+                  "pointerEvents": "none",
+                }
+              }
+              tabIndex={-1}
+            >
+              Previous
+            </a>
+          </SafeAnchor>
+        </li>
+      </PagerItem>
+      <PagerItem
+        disabled={true}
+        eventKey="next"
+        href="#"
+        key=".1"
+        next={false}
+        onSelect={null}
+        previous={false}
+      >
+        <li
+          className="disabled"
+        >
+          <SafeAnchor
+            componentClass="a"
+            disabled={true}
+            href="#"
+            onClick={[Function]}
+          >
+            <a
+              href="#"
+              onClick={[Function]}
+              onKeyDown={[Function]}
+              role="button"
+              style={
+                Object {
+                  "pointerEvents": "none",
+                }
+              }
+              tabIndex={-1}
+            >
+              Next
+            </a>
+          </SafeAnchor>
+        </li>
+      </PagerItem>
+    </ul>
+  </Pager>
+</Pagination>
+`;
+
+exports[`render a pagination bar 1`] = `
+<Pager
+  bsClass="pager"
+>
+  <PagerItem
+    disabled={true}
+    eventKey="prev"
+    href="#"
+    next={false}
+    previous={false}
+  >
+    Previous
+  </PagerItem>
+  <PagerItem
+    disabled={true}
+    eventKey="next"
+    href="#"
+    next={false}
+    previous={false}
+  >
+    Next
+  </PagerItem>
+</Pager>
+`;

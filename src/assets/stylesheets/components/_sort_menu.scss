@@ -8,6 +8,19 @@
   .nav-pills > li > a {
     border-radius: 20px;
     padding: 7px;
+
+    &:hover {
+      color: #4c384a;
+      background-color: #fcded5;
+    }
+  }
+
+  .nav-pills > li.active > a {
+    background-color: #5a4445;
+
+    &:hover {
+      background-color: #fcded5;
+    }
   }
 
   .sort-menu {

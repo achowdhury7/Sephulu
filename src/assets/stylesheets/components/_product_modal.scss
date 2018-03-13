@@ -1,0 +1,56 @@
+$product-modal-image-height: 300;
+$product-modal-image-width: 300;
+
+.modal-content {
+  position: relative;
+  height: auto;
+  min-height: 300px;
+  width: 650px;
+
+  button {
+    border: none;
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    cursor: pointer;
+    color: #866768;
+    z-index: 10;
+
+    &:hover {
+      color: #e25f70;
+      background-color: #ffffff;
+      border: none;
+    }
+  }
+
+  .product-modal-body {
+    padding: 32px;
+    
+    .product-modal-image-container {
+      background-image: url('http://via.placeholder.com/'+ $product-modal-image-width + 'x'+ $product-modal-image-height);
+      height: $product-modal-image-height + px;
+      width: $product-modal-image-width + px;
+      float: left;
+    }
+    
+    .product-modal-desc-container {
+      float: left;
+      margin-left: 5%;
+
+      .product-modal-desc-name {
+        font-size: 18px;
+        font-weight: 500;
+        color: #4c384a;
+      }
+
+      .product-modal-desc-category {
+        color: #e25f70;
+        line-height: 16px;
+        margin-top: 5px;
+        margin-bottom: 10px;
+        font-weight: 400;
+        text-transform: capitalize;
+      }
+    }
+  }
+}

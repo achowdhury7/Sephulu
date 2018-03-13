@@ -1,10 +1,16 @@
 {
   "plugins": [
     // support rest/spread properties for objects
-    "transform-object-rest-spread"
+    "transform-object-rest-spread",
+    "emotion"
   ],
   "presets": [
     ["es2015", { "modules": false }],
     "react"
-  ]
+  ],
+  "env": {
+    "test": {
+      "plugins": ["transform-es2015-modules-commonjs"]
+    } 
+  } 
 }
