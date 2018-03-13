@@ -2,11 +2,10 @@ import types from '../constants/actionTypes'
 import get from '../utils/api'
 
 const fetchProducts = (params, url) => 
-  dispatch => {console.log('inside dispatch')
+  dispatch => 
     get(params, url)
       .then((response) => dispatch(setProducts(response.data)))
       .catch(() => dispatch(setProductsError()))
-  }
 
 const setProducts = data => 
   ({
