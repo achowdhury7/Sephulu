@@ -23,6 +23,9 @@ export class PageContent extends Component {
     } else if (selection === '-price') {
       this.props.actions.setPriceDescending()
     }
+
+    document.body.scrollTop = 0
+    document.documentElement.scrollTop = 0
   }
 
   handlePageSizeSelect(selection) {

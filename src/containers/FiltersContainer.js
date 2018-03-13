@@ -22,6 +22,9 @@ export class FiltersContainer extends Component {
     } else {
       this.props.actions.deselectCategoryFilter(selectedCategory)
     }
+
+    document.body.scrollTop = 0
+    document.documentElement.scrollTop = 0
   }
 
   handlePriceRangeChange(event) {
@@ -32,6 +35,9 @@ export class FiltersContainer extends Component {
     } else {
       this.props.actions.deselectPriceRangeFilter(selectedPriceRange)
     }
+
+    document.body.scrollTop = 0
+    document.documentElement.scrollTop = 0
   }
 
   render() {
