@@ -1,0 +1,45 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`render product card 1`] = `
+<div
+  className="product-container"
+>
+  <div
+    className="product-image"
+  />
+  <div
+    className="product-desc"
+  >
+    <div
+      className="product-name"
+    >
+      <span>
+        product1
+      </span>
+    </div>
+    <div
+      className="product-category"
+    >
+      <span>
+        product
+      </span>
+    </div>
+    <div
+      className="product-price-container"
+    >
+      <span
+        className="product-sale-price"
+      >
+        $
+        NaN
+      </span>
+      <span
+        className="product-price cancelled"
+      >
+        $
+        NaN
+      </span>
+    </div>
+  </div>
+</div>
+`;

@@ -9,7 +9,7 @@ import { FiltersContainer, ProductCardsContainer } from '../containers'
 import pagination from '../reducers/pagination';
 import get from '../utils/api'
 
-class PageContent extends Component {
+export class PageContent extends Component {
   constructor(props) {
     super(props)
     this.handleSortMenuSelect = this.handleSortMenuSelect.bind(this)
@@ -89,7 +89,7 @@ const mapDispatchToProps = dispatch =>
   })
 
 const mapStateToProps = state => ({
-  paginationLinks: state.app.paginationLinks
+  paginationLinks: state.app.pagination.links
 })
 
 export default connect(

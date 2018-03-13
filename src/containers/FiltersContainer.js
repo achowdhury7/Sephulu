@@ -7,7 +7,7 @@ import { filterActions, productActions } from '../actions'
 import { Header, PageContent, FilterCheckbox } from '../components'
 
 
-class FiltersContainer extends Component {
+export class FiltersContainer extends Component {
   constructor(props) {
     super(props)
     this.handleCategoryChange = this.handleCategoryChange.bind(this)
@@ -79,8 +79,7 @@ const mapDispatchToProps = dispatch =>
 
 const mapStateToProps = state => ({
   categories: state.app.categories,
-  filters: state.app.filters,
-  priceRanges: state.app.priceRanges,
+  priceRanges: state.app.priceRanges
 })
 
 export default connect(

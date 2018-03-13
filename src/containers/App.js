@@ -7,7 +7,7 @@ import { Header } from '../components'
 import { PageContent } from '../containers'
 
 
-class App extends Component {
+export class App extends Component {
   componentDidMount() {
     const defaultPriceRanges = [
       { min: 0, max: 2500},

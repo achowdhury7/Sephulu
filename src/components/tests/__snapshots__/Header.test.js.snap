@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`render a header 1`] = `
+<div
+  className="header-container"
+>
+  <div
+    className="title"
+  >
+    <h1>
+      Sephulu
+    </h1>
+  </div>
+</div>
+`;

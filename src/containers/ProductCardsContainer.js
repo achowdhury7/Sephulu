@@ -6,7 +6,7 @@ import { filterActions, productActions } from '../actions'
 import { ProductCard } from '../containers'
 
 
-class ProductCardsContainer extends Component {
+export class ProductCardsContainer extends Component {
   render() {
     const listItems = this.props.productIds.map(id => (
       <li className="product-list-item" key={id}><ProductCard productId={id} /></li>

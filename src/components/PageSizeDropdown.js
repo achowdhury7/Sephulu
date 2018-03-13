@@ -24,7 +24,7 @@ class PageSizeDropdown extends Component {
 
   render() {
     const menuItems = this.props.menuItems.map(item => (
-      <MenuItem key={item} eventKey={item}>{item}</MenuItem>
+      <MenuItem id={item} key={item} eventKey={item}>{item}</MenuItem>
     ))
 
     return (

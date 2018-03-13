@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`pass selected value to onChange handler 1`] = `
+<label>
+  <input
+    onChange={[MockFunction]}
+    type="checkbox"
+  />
+</label>
+`;
+
+exports[`render a checkbox 1`] = `
+<label>
+  <input
+    type="checkbox"
+  />
+</label>
+`;

@@ -1,0 +1,8 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`render app 1`] = `
+<div>
+  <Header />
+  <Connect(PageContent) />
+</div>
+`;

@@ -3,7 +3,7 @@ import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
 import classNames from 'classnames/bind'
 
-const ProductCard = (props) => {
+export const ProductCard = (props) => {
   const product = props.products[props.productId]
   const productPriceClasses = classNames({
     'product-price': true,
