@@ -1,14 +1,20 @@
+$product-card-image-height: 180;
+$product-card-image-width: 250;
+$product-modal-image-height: 300;
+$product-modal-image-width: 300;
+
 .product-container {
   border: 1px solid #f3f3f3;
   width: 250px;
 }
 
 .product-image {
-  background-image: url('http://via.placeholder.com/250x180');
-  height: 180px;
+  background-image: url('http://via.placeholder.com/'+ $product-card-image-width + 'x'+ $product-card-image-height);
+  height: $product-card-image-height + px;
 }
 
 .product-desc {
+  position: relative;
   z-index: 2;
   background: #fff;
   height: 100px;
@@ -38,4 +44,14 @@
 
 .product-sale-price + .product-price {
   margin: 0 0 0 10px;
+}
+
+.product-modal-image-container {
+  background-image: url('http://via.placeholder.com/'+ $product-modal-image-width + 'x'+ $product-modal-image-height);
+  height: $product-modal-image-height + px;
+  width: $product-modal-image-width + px;
+}
+
+.modal-content {
+  min-height: 400px;
 }

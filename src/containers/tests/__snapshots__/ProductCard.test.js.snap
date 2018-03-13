@@ -13,9 +13,11 @@ exports[`render product card 1`] = `
     <div
       className="product-name"
     >
-      <span>
+      <a
+        onClick={[Function]}
+      >
         product1
-      </span>
+      </a>
     </div>
     <div
       className="product-category"
@@ -41,5 +43,54 @@ exports[`render product card 1`] = `
       </span>
     </div>
   </div>
+  <Modal
+    animation={true}
+    autoFocus={true}
+    backdrop={true}
+    bsClass="modal"
+    dialogComponentClass={[Function]}
+    enforceFocus={true}
+    keyboard={true}
+    manager={
+      ModalManager {
+        "add": [Function],
+        "containers": Array [],
+        "data": Array [],
+        "handleContainerOverflow": true,
+        "hideSiblingNodes": true,
+        "isTopModal": [Function],
+        "modals": Array [],
+        "remove": [Function],
+      }
+    }
+    onHide={[Function]}
+    renderBackdrop={[Function]}
+    restoreFocus={true}
+    show={false}
+  >
+    <ModalHeader
+      bsClass="modal-header"
+      closeButton={true}
+      closeLabel="Close"
+    >
+      <ModalTitle
+        bsClass="modal-title"
+        componentClass="h4"
+      >
+        product1
+      </ModalTitle>
+    </ModalHeader>
+    <ModalBody
+      bsClass="modal-body"
+      componentClass="div"
+    >
+      <div
+        className="product-modal-image-container"
+      />
+      <div
+        className="product-modal-desc-container"
+      />
+    </ModalBody>
+  </Modal>
 </div>
 `;

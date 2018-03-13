@@ -17,3 +17,13 @@ body {
 .hidden {
   display: none;
 }
+
+a {
+  color: #e25f70;
+
+  &:hover {
+    color: #5a4445;
+    cursor: pointer;
+    text-decoration: none;
+  }
+}
