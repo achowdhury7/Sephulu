@@ -1,8 +1,9 @@
 import React, { Component } from 'react'
 import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
-import { Modal } from 'react-bootstrap'
 import classNames from 'classnames/bind'
+
+import { ProductModal } from '../components'
 
 export class ProductCard extends Component {
   constructor(props) {
@@ -46,15 +47,11 @@ export class ProductCard extends Component {
             <span className={productPriceClasses}>${(product.price/100).toFixed(2)}</span>
           </div>
         </div> 
-        <Modal show={this.state.showModal} onHide={this.state.handleCloseModal}>
-          <Modal.Header closeButton>
-            <Modal.Title>{product.name}</Modal.Title>
-          </Modal.Header>
-          <Modal.Body>
-            <div className="product-modal-image-container"></div>
-            <div className="product-modal-desc-container"></div>
-          </Modal.Body>
-        </Modal>
+        <ProductModal 
+          show={this.state.showModal} 
+          onHide={this.handleCloseModal}
+          product={product}
+        />
       </div>
       
     )

@@ -31,6 +31,31 @@
       flex-direction: row;
       justify-content: space-between;
     }
+
+    .dropdown {
+      .btn-default:hover {
+        background-color: #ffffff;
+        border-color: #e25f70;
+        color: #e25f70;
+      }
+      
+      .btn-default:active, :focus {
+        border-color: #e25f70;
+        color: #e25f70;
+        background-color: #ffffff;
+      }
+
+      .dropdown-menu {
+        li>a {
+          color: #e25f70;
+
+          &:hover {
+            color: #866768;
+            background-color: #ffffff;
+          }
+        }
+      }
+    }
   }
 
   .main-content {

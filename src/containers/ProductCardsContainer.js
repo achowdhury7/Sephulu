@@ -10,7 +10,11 @@ import { ProductCard } from '../containers'
 export class ProductCardsContainer extends Component {
   render() {
     if (this.props.isFetching) {
-      return (<PulseLoader loading={this.props.isFetching} />)
+      return (
+        <div className="product-list-loader">
+          <PulseLoader loading={this.props.isFetching} />
+        </div>    
+      )
     } else {
       const listItems = this.props.productIds.map(id => (
         <li className="product-list-item" key={id}><ProductCard productId={id} /></li>

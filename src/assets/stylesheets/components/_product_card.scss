@@ -1,7 +1,5 @@
 $product-card-image-height: 180;
 $product-card-image-width: 250;
-$product-modal-image-height: 300;
-$product-modal-image-width: 300;
 
 .product-container {
   border: 1px solid #f3f3f3;
@@ -27,6 +25,14 @@ $product-modal-image-width: 300;
   font-weight: 500;
   line-height: 20px;
   text-transform: capitalize;
+
+  a {
+    color: #866768;
+
+    &:hover {
+      color: #e25f70;
+    }
+  }
 }
 
 .product-category {
@@ -44,14 +50,4 @@ $product-modal-image-width: 300;
 
 .product-sale-price + .product-price {
   margin: 0 0 0 10px;
-}
-
-.product-modal-image-container {
-  background-image: url('http://via.placeholder.com/'+ $product-modal-image-width + 'x'+ $product-modal-image-height);
-  height: $product-modal-image-height + px;
-  width: $product-modal-image-width + px;
-}
-
-.modal-content {
-  min-height: 400px;
 }
