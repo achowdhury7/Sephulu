@@ -16,7 +16,7 @@ class SortMenu extends Component {
         activeKey: key
       })
   
-      if (this.props.handleSelect) this.props.handleSelect(key)
+    if (this.props.handleSelect) this.props.handleSelect(key)
     }
   }
 

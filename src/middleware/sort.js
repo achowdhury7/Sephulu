@@ -22,27 +22,17 @@ const paramBuilder = (paramArray) => {
   return params
 }
 
-const setPriceAscending = ({ dispatch, getState, action }) => {
+const setSortItem = ({ dispatch, getState, action }) => {
   const categoryFilterParams = getState().app.filters.categoryParams
   const priceRangeFilterParams = getState().app.filters.priceRangeParams
-  const sortParam = 'sort=price'  
-  const paramArray = [categoryFilterParams, priceRangeFilterParams, sortParam]
-  
-  dispatch(productActions.fetchProducts(paramBuilder(paramArray)))
-}
-
-const setPriceDescending = ({ dispatch, getState, action }) => {
-  const categoryFilterParams = getState().app.filters.categoryParams
-  const priceRangeFilterParams = getState().app.filters.priceRangeParams
-  const sortParam = 'sort=-price'  
+  const sortParam = `sort=${action.payload.data}`  
   const paramArray = [categoryFilterParams, priceRangeFilterParams, sortParam]
   
   dispatch(productActions.fetchProducts(paramBuilder(paramArray)))
 }
 
 const interceptors = {}
-interceptors[types.SET_PRICE_ASCENDING] = setPriceAscending
-interceptors[types.SET_PRICE_DESCENDING] = setPriceDescending
+interceptors[types.SET_SORT_PARAM] = setSortItem
 
 const middleware = ({ dispatch, getState }) =>
   (next) => (action) => {

@@ -18,12 +18,8 @@ export class PageContent extends Component {
   }
 
   handleSortMenuSelect(selection) {
-    if (selection === 'price') {
-      this.props.actions.setPriceAscending()
-    } else if (selection === '-price') {
-      this.props.actions.setPriceDescending()
-    }
-
+    this.props.actions.setSortItem(key)
+    
     document.body.scrollTop = 0
     document.documentElement.scrollTop = 0
   }

@@ -1,16 +1,13 @@
 import types from '../constants/actionTypes'
 
-const setPriceAscending = (data) => 
-  ({
-    type: types.SET_PRICE_ASCENDING
-  })
-
-const setPriceDescending = (data) => 
-  ({
-    type: types.SET_PRICE_DESCENDING
-  })
+const setSortItem = (data) => 
+	({
+		type: types.SET_SORT_PARAM,
+		payload: {
+			data
+		}	
+	})
 
 export default {
-  setPriceAscending,
-  setPriceDescending
+  setSortItem
 }

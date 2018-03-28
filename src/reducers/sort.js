@@ -4,8 +4,6 @@ import types from '../constants/actionTypes'
 const reducers = {}
 const initState = ''
 
-reducers[types.SET_PRICE_ASCENDING] = (state = initState, action) => 'sort=price'
-
-reducers[types.SET_PRICE_DESCENDING] = (state = initState, action) => 'sort=-price'
+reducers[types.SET_SORT_ITEM] = (state = initState, action) => `sort=${action.payload.data}`
 
 export default handleActions(reducers, initState)

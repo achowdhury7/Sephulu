@@ -1,8 +1,7 @@
 const actionTypes = {}
 
 const actionConstants = [
-  'SET_PRICE_ASCENDING',
-  'SET_PRICE_DESCENDING'
+  'SET_SORT_ITEM'
 ]
 
 actionConstants.map((action) => { actionTypes[action] = action })
